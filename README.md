@@ -1,36 +1,36 @@
-# Algonquin Pet Store (On Steroids)
-Welcome to the Algonquin Pet Store (On Steroids) application.
+# BestBuy-on-Steroids: Cloud-Native Microservices E-Commerce Application
 
-This sample demo app consists of a group of containerized microservices that can be easily deployed into a Kubernetes cluster. This is meant to show a realistic scenario using a polyglot architecture, event-driven design, and common open source back-end services (eg - RabbitMQ, MongoDB). The application also leverages OpenAI's models to generate product descriptions and images. This can be done using either [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/overview) or [OpenAI](https://openai.com/).
+## Overview
 
-This application is inspired by Azure Kubernetes Service (AKS) quickstart demo [Azure Kubernetes Service (AKS) Docs](https://learn.microsoft.com/en-us/azure/aks/).
+BestBuy-on-Steroids is a cloud-native, full-stack microservices-based e-commerce demo app developed for Best Buy. Inspired by the Algonquin Pet Store (on Steroids) architecture, this application demonstrates modern cloud-native design using Kubernetes, managed messaging services, and AI integration.
 
-> [!NOTE]
-> This is not meant to be an example of perfect code to be used in production, but more about showing a realistic application running in kubernetes. 
+---
 
-## Architecture
+## Architecture Diagram
 
-The application has the following services: 
+![Architecture Diagram](./assets/bestbuy-architecture.png)
 
-| Service | Description | Github Repo |
-| --- | --- | --- |
-| `store-front` | Web app for customers to place orders (Vue.js) | [store-front-L8](https://github.com/ramymohamed10/store-front-L8) |
-| `store-admin` | Web app used by store employees to view orders in queue and manage products (Vue.js) | [store-admin-L8](https://github.com/ramymohamed10/store-admin-L8) |
-| `order-service` | This service is used for placing orders (Javascript) | [order-service-L8](https://github.com/ramymohamed10/order-service-L8) |
-| `product-service` | This service is used to perform CRUD operations on products (Rust) | [product-service-L8](https://github.com/ramymohamed10/product-service-L8) |
-| `makeline-service` | This service handles processing orders from the queue and completing them (Golang) | [makeline-service-L8](https://github.com/ramymohamed10/makeline-service-L8) |
-| `ai-service` | Optional service for adding generative text and graphics creation (Python) | [ai-service-L8](https://github.com/ramymohamed10/ai-service-L8) |
-| `rabbitmq` | RabbitMQ for an order queue | [rabbitmq](https://github.com/docker-library/rabbitmq) |
-| `mongodb` | MongoDB instance for persisted data | [mongodb](https://github.com/docker-library/mongo) |
-| `virtual-customer` | Simulates order creation on a scheduled basis (Rust) | [virtual-customer-L8](https://github.com/ramymohamed10/virtual-customer-L8) |
-| `virtual-worker` | Simulates order completion on a scheduled basis (Rust) | [virtual-worker-L8](https://github.com/ramymohamed10/virtual-worker-L8) |
+---
 
+## 🛠️ Application Functionality
 
-![Logical Application Architecture Diagram](assets/Algonquin%20Pet%20Store%20On%20Steroids.png)
+| Service              | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| **Store-Front**      | Frontend for customers to browse products and place orders.                 |
+| **Store-Admin**      | Admin dashboard for employees to manage products and view orders.           |
+| **Order-Service**    | Handles order creation and sends orders to Azure Service Bus queue.         |
+| **Product-Service**  | Provides CRUD APIs for managing product information.                        |
+| **Makeline-Service** | Processes orders from the queue and marks them as completed.                |
+| **AI-Service**       | Integrates with GPT-4 and DALL·E to generate product descriptions and images. |
+| **MongoDB**          | Stores product and order data, deployed via Kubernetes StatefulSet.         |
 
-## Run the app on Azure Kubernetes Service (AKS)
+---
 
-You can use the kubernetes YAML files provided in the [Deployment Files](./Deployment%20Files/) folder to deploy the app to an AKS cluster.
+## ⚙️ Deployment Instructions
 
-
-
+1. Clone all microservices to your local environment.
+2. Build and push Docker images:
+   ```bash
+   docker build -t <your-dockerhub-username>/store-front ./store-front
+   docker push <your-dockerhub-username>/store-front
+   # Repeat for other services
