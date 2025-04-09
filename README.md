@@ -38,15 +38,15 @@ The architecture is inspired by the "Algonquin Pet Store (On Steroids)" and exte
 
 ## 🔍 Service Descriptions
 
-| Service           | Description                                                               |
-|------------------|---------------------------------------------------------------------------|
-| **Store-Front**   | Customer-facing UI for browsing products and placing orders              |
-| **Store-Admin**   | Admin dashboard for managing products and reviewing order status         |
-| **Product-Service** | Handles CRUD operations for product data, stores in MongoDB             |
-| **Order-Service** | Receives and processes orders, sends them to Azure Service Bus queue     |
-| **Makeline-Service** | Listens to queue and completes order fulfillment                      |
-| **AI-Service**    | Uses GPT-4 and DALL·E to generate product descriptions and images         |
-| **MongoDB**       | Stores order and product data using Kubernetes StatefulSet               |
+| Service              | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| **Store-Front**      | Customer-facing UI for browsing products and placing orders          |
+| **Store-Admin**      | Admin dashboard for managing products and reviewing order status     |
+| **Product-Service**  | Handles CRUD operations for product data, stores in MongoDB          |
+| **Order-Service**    | Receives and processes orders, sends them to Azure Service Bus queue |
+| **Makeline-Service** | Listens to queue and completes order fulfillment                     |
+| **AI-Service**       | Uses GPT-4 and DALL·E to generate product descriptions and images    |
+| **MongoDB**          | Stores order and product data using Kubernetes StatefulSet           |
 
 ---
 
@@ -102,27 +102,27 @@ The architecture is inspired by the "Algonquin Pet Store (On Steroids)" and exte
 
 ## 📁 Microservice Repositories
 
-| Service           | GitHub Repository                             |
-|------------------|------------------------------------------------|
-| Store-Front       | https://github.com/yourname/store-front        |
-| Store-Admin       | https://github.com/yourname/store-admin        |
-| Product-Service   | https://github.com/yourname/product-service    |
-| Order-Service     | https://github.com/yourname/order-service      |
-| Makeline-Service  | https://github.com/yourname/makeline-service   |
-| AI-Service        | https://github.com/yourname/ai-service         |
+| Service          | GitHub Repository                                     |
+| ---------------- | ----------------------------------------------------- |
+| Store-Front      | https://github.com/RyanRen2023/store-front-final      |
+| Store-Admin      | https://github.com/RyanRen2023/store-admin-final      |
+| Product-Service  | https://github.com/RyanRen2023/product-service-final  |
+| Order-Service    | https://github.com/RyanRen2023/order-service-final    |
+| Makeline-Service | https://github.com/RyanRen2023/makeline-service-final |
+| AI-Service       | https://github.com/RyanRen2023/ai-service-final       |
 
 ---
 
 ## 🐳 Docker Images
 
-| Service           | Docker Image Link                              |
-|------------------|-------------------------------------------------|
-| Store-Front       | https://hub.docker.com/r/yourname/store-front   |
-| Store-Admin       | https://hub.docker.com/r/yourname/store-admin   |
-| Product-Service   | https://hub.docker.com/r/yourname/product-service |
-| Order-Service     | https://hub.docker.com/r/yourname/order-service |
-| Makeline-Service  | https://hub.docker.com/r/yourname/makeline-service |
-| AI-Service        | https://hub.docker.com/r/yourname/ai-service    |
+| Service          | Docker Image Link                                  |
+| ---------------- | -------------------------------------------------- |
+| Store-Front      | https://hub.docker.com/r/yourname/store-front      |
+| Store-Admin      | https://hub.docker.com/r/yourname/store-admin      |
+| Product-Service  | https://hub.docker.com/r/yourname/product-service  |
+| Order-Service    | https://hub.docker.com/r/yourname/order-service    |
+| Makeline-Service | https://hub.docker.com/r/yourname/makeline-service |
+| AI-Service       | https://hub.docker.com/r/yourname/ai-service       |
 
 ---
 
