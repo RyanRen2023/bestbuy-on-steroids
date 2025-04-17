@@ -179,7 +179,7 @@ Watch a demo of the deployed application:
 ## Resources
 
 - [Algonquin Pet Store (On Steroids)](https://github.com/ramymohamed10/algonquin-pet-store-on-steroids)
-- [CST8916 Lab6](https://github.com/ramymohamed10/Lab6_25W_CST8915)
+- [CST8915 Lab6](https://github.com/ramymohamed10/Lab6_25W_CST8915)
 - [CST8915 Lab9](https://github.com/ramymohamed10/Lab9_24F_CST8915)
 - [Azure Service Bus Documentation](https://learn.microsoft.com/en-us/azure/service-bus-messaging/)
 - [OpenAI API Docs](https://platform.openai.com/docs/)
