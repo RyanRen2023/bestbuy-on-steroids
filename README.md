@@ -32,6 +32,11 @@ BestBuy-on-Steroids is a cloud-native microservices-based e-commerce application
 
 The architecture is inspired by the "Algonquin Pet Store (On Steroids)" and extended with AI capabilities and a managed message queue. Each component is containerized and deployed to a Kubernetes cluster.
 
+![CI/CD GitHub Action Flow](./assets/ci-cd-process.png)
+
+
+The CI/CD pipeline is automated using GitHub Actions. On every push to GitHub, the CI job builds and pushes Docker images to Docker Hub. Then, a CD job pulls the image and deploys it to a Kubernetes cluster, ensuring rapid and reliable delivery.
+
 ---
 
 ## Service Descriptions
